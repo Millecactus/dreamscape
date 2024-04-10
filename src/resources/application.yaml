@@ -1,0 +1,41 @@
+#spring properties :
+
+spring:
+  application:
+    name: students
+
+      #mail properties :
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: guillaume.codecraft@gmail.com
+    password: qqisbqxcvyazdnkt
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    platform: generic
+
+    #jpa properties
+  jpa:
+    hibernate:
+      ddl-auto: none
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+  h2:
+    console:
+      enabled: true
+
+server:
+  port: 8090
+
+
+

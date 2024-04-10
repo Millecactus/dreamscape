@@ -1,0 +1,36 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import '../style.css';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+		</br>
+            <img src= "/logo2.png" style ="width : 50%;">
+			<h1> Dreamscape</h1>
+			<h3> Beyond your wildest dreams</h3>
+        <p>
+        </br>
+            Dreamscape est une plateforme de partage de rêves. Ici, vous pouvez partager et échanger de manière anonyme vos expériences sur vos rêves.
+            Votre rêve est il partagé par d'autres ?
+            Quelle en est sa signification ?
+            </br></br></br>
+            <div class ="row" style ="display:flex;">
+                <button class ="btn"> <a href="/blog" style ="text-decoration:none; color :grey; font-size : 14px;"> Explore</a> </button>
+                </br>
+                <button class ="btn"> <a href="/about" style ="text-decoration:none;color :grey;font-size : 14px;" > Partage </a></button>
+            </div>
+		</p>
+		</main>
+		<Footer />
+	</body>
+</html>

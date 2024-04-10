@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/BlogPost2.astro';
+import '../style.css';
+---
+
+<Layout
+	title="Partage ton expérience"
+	description="Lorem ipsum dolor sit amet"
+	heroImage="/sleep2.jpg"
+>
+
+	<p>
+		Toi aussi partage ton expérience !
+		Pas besoin de s'incrire, tu peux partager ton reve de manière anonyme.
+		Décris-moi le plus précisement possible tout les détails dont tu te souviens.
+		Quelle sensation avais-tu ? Qu'est ce que tu ressentais ?
+	</p>
+
+    <p>
+    Partage ton expérience en m'envoyant l'histoire de ton reve à <a href="mailto:dreamscape@gmail.com?subject=Raconte-ton-reve&body=Corps du message">
+    <strong>dreamscape@gmail.com </strong></a>
+    </p>
+
+</Layout>
+
+ <script>
+        function envoyerEmail() {
+            var texte = document.getElementById('textInput').value;
+
+            fetch('/envoyer-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ texte: texte })
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('E-mail envoyé avec succès !');
+                } else {
+                    alert('Erreur lors de l\'envoi de l\'e-mail.');
+                }
+            })
+            .catch(error => {
+                console.error('Erreur lors de l\'envoi de l\'e-mail :', error);
+                alert('Erreur lors de l\'envoi de l\'e-mail.');
+            });
+        }
